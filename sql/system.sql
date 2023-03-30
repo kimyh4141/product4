@@ -1,0 +1,12 @@
+drop user c##product4;
+--계정생성
+CREATE USER c##product IDENTIFIED BY product41234
+    DEFAULT TABLESPACE users
+    TEMPORARY TABLESPACE temp
+    PROFILE DEFAULT;
+--권한부여
+GRANT CONNECT, RESOURCE TO c##product4;
+GRANT CREATE VIEW, CREATE SYNONYM TO c##product4;
+GRANT UNLIMITED TABLESPACE TO c##product4;
+--락 풀기
+ALTER USER c##product4 ACCOUNT UNLOCK;
